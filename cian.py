@@ -169,10 +169,10 @@ for URL in lists:
         p.save_as(records=info, dest_file_name=f'{today}/{name}')
         z += 1
         
-        gc = gspread.service_account(filename='fluid-gamma-319906-a4ea6dcfcfee.json')
-        sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/10k3owGfIX2uh6Q7ygP3nOCxFM1RYur8mt-SzpcV_d9c/')
+        gc = gspread.service_account(filename='') #token
+        sh = gc.open_by_url('') #google sheet
 
-        worksheet = sh.worksheet("ЦИАН новостройки")
+        worksheet = sh.worksheet("") #sheetname
 
         df = pd.read_excel(f'{today}/{name}')
 
